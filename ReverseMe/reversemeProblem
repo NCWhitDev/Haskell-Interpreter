@@ -1,5 +1,0 @@
--- In this problem, I am creating a new cipher however to begain I need to reverse the string. Meaning I need my string in reverse order.
-
-Ex: "hello there" -> "ereht olleh" 
-
-Ex: "This is a fun thing to do!" -> "!od ot gniht nuf a si sihT" 
