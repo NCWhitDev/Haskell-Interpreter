@@ -1,3 +1,27 @@
+import Data.Char
+import Data.List
+
+type Vars = String
+type TVars = String
+
+type Constr = (Types,Types)
+type Cxt = [(Vars,Types)]
+type TSub = [(TVars,Types)]
+
+data Types = Ints | Func Types Types | TVar TVars
+    deriving (Show,Eq)
+    
+-- /\ ::= \/ | /\ /\ | \ \/ /\ | C Int | /\ - /\ | IfPos(/\,/\,/\) | Y
+data Terms = Var Vars | App Terms Terms | Abs Vars Terms
+    | Num Integer | Sub Terms Terms | IfPos Terms Terms Terms | Y
+    deriving (Show,Eq)
+
+data Token = VSym String | CSym Integer
+    | SubOp | IfPositiveK | ThenK | ElseK | YComb
+    | LPar | RPar | Dot | Backslash
+    | Err String | PT Terms
+    deriving (Eq,Show)
+
 createToken :: String -> [Token]
 createToken "" = []                                     -- Empty String
 createToken('(':xs) = LPar : createToken xs             -- Left par
