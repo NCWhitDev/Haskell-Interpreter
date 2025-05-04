@@ -21,7 +21,8 @@ data Token = VSym String | CSym Integer
     | LPar | RPar | Dot | Backslash
     | Err String | PT Terms
     deriving (Eq,Show)
-
+-- ================================================================================================================================================
+    
 createToken :: String -> [Token]
 createToken "" = []                                     -- Empty String
 createToken('(':xs) = LPar : createToken xs             -- Left par
