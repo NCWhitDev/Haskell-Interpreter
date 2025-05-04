@@ -1,1 +1,24 @@
+Introduction
+A leap year (in the Gregorian calendar) occurs:
 
+Its a leap year if its evenly divisible by 4.
+Unless the year is evenly divisible by 100, in which case it's only a leap year if the year is also evenly divisible by 400.
+Some examples:
+
+1997 was not a leap year, it's not divisible by 4.
+1900 was not a leap year, it's not divisible by 400.
+2000 was a leap year!
+
+EX1: 2000 % 400 = 0 (Confirmed Leap year!!!)
+ 
+EX2: 1987 % 400 = 387...
+     1987 % 100 = 87...
+     1987 % 4 = 3... (Confimred NOT a Leap year)
+
+EX3: 2025 % 400 = 25...
+     2025 % 100 = 25...
+     2025 % 4 = 1... (Confirmed NOT a Leap year)
+
+EX4: 1900 % 400 = 300..
+     1900 % 100 = 0 ... (Oh maybe its not a leap year?)
+     1900 % 4 = 0 (Oh wait it is a Leap year!!! Gotta be carful with when you do your cases to avoid checking the wrong thing at the wrong time!)
