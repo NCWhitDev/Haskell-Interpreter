@@ -1,4 +1,4 @@
-Haskell Interpreter — Technical Overview
+Haskell Interpreter
 
 Haskell is a statically typed, purely functional programming language that emphasizes referential transparency, immutability, and lazy evaluation. It is widely used in academia and industry for tasks that demand high correctness, such as compilers, theorem provers, and financial systems. Haskell’s design is grounded in the lambda calculus and type theory, making it a powerful model for exploring programming language semantics.
 
